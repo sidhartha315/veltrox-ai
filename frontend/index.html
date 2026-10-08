@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Veltrox AI</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">V</div>
+
+            <div>
+                <h2>Veltrox AI</h2>
+                <span>AI Assistant</span>
+            </div>
+        </div>
+
+
+        <button
+            id="newChatButton"
+            class="new-chat"
+        >
+            + New Chat
+        </button>
+
+
+        <div class="sidebar-section">
+
+            <div class="section-title">
+                RECENT CHATS
+            </div>
+
+            <div class="recent-chat">
+                Introduction to GenAI
+            </div>
+
+            <div class="recent-chat">
+                Explain RAG
+            </div>
+
+            <div class="recent-chat">
+                Python Interview
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <button id="themeButton">
+                🌙 Theme
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div>
+
+                <h1>Veltrox AI</h1>
+
+                <p>
+                    AI Knowledge & Task Assistant
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- CHAT AREA -->
+
+        <section
+            id="messages"
+            class="messages"
+        >
+
+            <div class="welcome">
+
+                <div class="welcome-logo">
+                    V
+                </div>
+
+                <h2>
+                    How can I help you today?
+                </h2>
+
+                <p>
+                    Ask Veltrox AI anything about
+                    programming, Generative AI,
+                    your resume, or uploaded documents.
+                </p>
+
+                <div class="examples">
+
+                    <button class="example">
+                        Explain Generative AI
+                    </button>
+
+                    <button class="example">
+                        What is RAG?
+                    </button>
+
+                    <button class="example">
+                        Explain Python
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INPUT AREA -->
+
+        <div class="input-area">
+
+            <div class="input-box">
+
+                <textarea
+                    id="messageInput"
+                    placeholder="Message Veltrox AI..."
+                    rows="1"
+                ></textarea>
+
+
+                <div class="input-actions">
+
+                    <label
+                        for="pdfInput"
+                        class="upload-button"
+                        title="Upload PDF"
+                    >
+                        📎
+                    </label>
+
+                    <input
+                        type="file"
+                        id="pdfInput"
+                        accept=".pdf"
+                        hidden
+                    >
+
+
+                    <button
+                        id="sendButton"
+                        class="send-button"
+                    >
+                        ➤
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="uploadStatus"
+                class="upload-status"
+            ></div>
+
+
+            <p class="disclaimer">
+                Veltrox AI can make mistakes.
+                Verify important information.
+            </p>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
