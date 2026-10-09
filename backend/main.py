@@ -55,10 +55,11 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://127.0.0.1:5500",
-        "http://localhost:5500"
+    "http://127.0.0.1:5500",
+    "http://localhost:5500",
+    "https://angle-brands-displays-replication.trycloudflare.com",
     ],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -363,16 +364,19 @@ ANSWER:
     # -----------------------------------------------------
 
     response = ollama_client.chat(
-
-        model=OLLAMA_MODEL,
-
-        messages=[
-            {
-                "role": "user",
-                "content": prompt
-            }
-        ]
-    )
+    model=OLLAMA_MODEL,
+    messages=[
+        {
+            "role": "user",
+            "content": prompt
+        }
+    ],
+    options={
+        "num_predict": 40,
+        "num_ctx": 1024,
+        "temperature": 0.3 
+    }
+)
 
 
     return response["message"]["content"]

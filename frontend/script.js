@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://stem-unexpected-except-cancelled.trycloudflare.com";
 
 const messages = document.getElementById("messages");
 const input = document.getElementById("messageInput");
